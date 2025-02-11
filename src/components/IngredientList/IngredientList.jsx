@@ -6,11 +6,12 @@ const IngredientList = ({ ingredients, addToBurger }) => {
             <h2>Available Ingredients</h2>
             <ul>
                 {ingredients.map((ingredient, index) => (
-                    <li
+                    <li 
                         key={index}
-                        style={{ backgroundColor: ingredient.color, padding: '10px', margin: '5px' }}
-                        onClick={() => addToBurger(ingredient)}
-                    >
+                        style={{ backgroundColor: ingredient.color, padding: '10px', margin: '10px' }}>
+                        <button onClick={() => addToBurger(ingredient)} style={{ margin: "10px" }}>
+                            +
+                        </button>
                         {ingredient.name}
                     </li>
                 ))}

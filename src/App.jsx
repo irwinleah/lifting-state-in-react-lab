@@ -29,8 +29,9 @@ const App = () => {
 
   }
 
-  const removeFromBurger = () => {
-    setStack(prevStack => prevStack.slice(0, -1));
+  const removeFromBurger = (ingredient) => {
+    setStack((prevStack) => prevStack.filter(item => item !== ingredient))
+    // setStack(prevStack => prevStack.slice(0, -1));
 
   }
 
